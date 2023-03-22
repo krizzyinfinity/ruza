@@ -59,7 +59,7 @@ const BookingForm = () => {
     try {
       setLoading(true);
 
-      const result = await axios.post("https://ruza-apartments.onrender.com/api/bookings/bookroom", bookingDetails);
+      const result = await axios.post("/api/bookings/bookroom", bookingDetails);
       setLoading(false);
       Swal.fire(t("congragulation"), t("congragulation2"), "success").then(
         (result) => {

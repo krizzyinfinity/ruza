@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6408b069.css",
-    "main.js": "/static/js/main.fe5b7160.js",
+    "main.js": "/static/js/main.c8505da2.js",
     "static/media/pool.jpg": "/static/media/pool.e565b6ed2a89802455a7.jpg",
     "static/media/pic1.jpg": "/static/media/pic1.1edc2ae4bbf5fc0b2ebb.jpg",
     "static/media/mamtat.jpg": "/static/media/mamtat.23d01e9c61d87d3720d8.jpg",
@@ -25,10 +25,10 @@
     "static/media/cinema.jpeg": "/static/media/cinema.ccb16dd1b2ab9d1db860.jpeg",
     "index.html": "/index.html",
     "main.6408b069.css.map": "/static/css/main.6408b069.css.map",
-    "main.fe5b7160.js.map": "/static/js/main.fe5b7160.js.map"
+    "main.c8505da2.js.map": "/static/js/main.c8505da2.js.map"
   },
   "entrypoints": [
     "static/css/main.6408b069.css",
-    "static/js/main.fe5b7160.js"
+    "static/js/main.c8505da2.js"
   ]
 }
