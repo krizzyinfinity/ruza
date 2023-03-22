@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6408b069.css",
+    "main.js": "/static/js/main.fe5b7160.js",
+    "static/media/pool.jpg": "/static/media/pool.e565b6ed2a89802455a7.jpg",
+    "static/media/pic1.jpg": "/static/media/pic1.1edc2ae4bbf5fc0b2ebb.jpg",
+    "static/media/mamtat.jpg": "/static/media/mamtat.23d01e9c61d87d3720d8.jpg",
+    "static/media/ap4.jpg": "/static/media/ap4.0c0bcbaaf903836a407b.jpg",
+    "static/media/badgminton.jpg": "/static/media/badgminton.9c1dc4b6acfdf2585244.jpg",
+    "static/media/kayak2.jpg": "/static/media/kayak2.3028c6ebcddf1a822317.jpg",
+    "static/media/ap2.jpg": "/static/media/ap2.aade158d112d00f56196.jpg",
+    "static/media/kayak1.jpg": "/static/media/kayak1.a5ca6a44fb584fcf921b.jpg",
+    "static/media/kayak6.jpeg": "/static/media/kayak6.9a4408cd06a6a69f6a90.jpeg",
+    "static/media/ap3.jpg": "/static/media/ap3.b440b8d6fa3be84892a1.jpg",
+    "static/media/kayak4.jpg": "/static/media/kayak4.d05f655959354e64651d.jpg",
+    "static/media/tennis.jpeg": "/static/media/tennis.eac09098c3afd7dc613b.jpeg",
+    "static/media/ap5.jpg": "/static/media/ap5.a9c2f28d8d580bdde600.jpg",
+    "static/media/ap1.jpg": "/static/media/ap1.47025112fae02e4e34aa.jpg",
+    "static/media/sauna.jpeg": "/static/media/sauna.a7d67bb6c963e2e77cb3.jpeg",
+    "static/media/bike.jpg": "/static/media/bike.7b356de4bb024034e35c.jpg",
+    "static/media/ap7.jpg": "/static/media/ap7.a9955e03e4619edfe641.jpg",
+    "static/media/ap6.jpg": "/static/media/ap6.0ab578b72d47ffc8936a.jpg",
+    "static/media/aqa.jpg": "/static/media/aqa.709a01d306cae3cea8c7.jpg",
+    "static/media/jacuzzi.jpg": "/static/media/jacuzzi.9f7f2bb1c027accf8d83.jpg",
+    "static/media/cinema.jpeg": "/static/media/cinema.ccb16dd1b2ab9d1db860.jpeg",
+    "index.html": "/index.html",
+    "main.6408b069.css.map": "/static/css/main.6408b069.css.map",
+    "main.fe5b7160.js.map": "/static/js/main.fe5b7160.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6408b069.css",
+    "static/js/main.fe5b7160.js"
+  ]
+}

@@ -1,0 +1,143 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+
+}
+.div {
+  overflow: hidden;
+  background-image:  url("../src/images/pic1.jpg");
+}
+.div1 {
+  overflow: hidden; 
+  background-image:  url("../src/images/mamtat.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:50vh;
+ 
+aspect-ratio: 1/1;
+margin: auto; 
+margin-top:5rem;
+object-fit: contain;
+}
+.myInput {
+  height: 5vh;
+  width:30%;
+  margin-bottom:2vh;
+  border-radius: 1vh;
+  padding-left:2vh;
+}
+
+table {
+  border-collapse: collapse;
+  background:rgba(255,255,255,0.4);
+}
+
+th,
+td {
+  border: 1px solid #000;
+  padding: 0.75rem;
+  text-align: left;
+}
+td:last-child {
+  text-align: center;
+}
+
+th {
+  font-weight: bold;
+  white-space: nowrap;
+  background: #000;
+  color: #fff;
+}
+
+tr:first-of-type th:not(:last-child) {
+  border-right-color: transparent;
+}
+
+tr:first-child th:first-child,
+tr:not(:first-child):not(:last-child) th {
+  border-bottom-color: transparent !important;
+}
+ 
+
+
+
+.image {
+  display: none;
+}
+.imageActive {
+
+  width: 50vw;
+  height: 50vh;
+  object-fit: cover;
+  box-sizing: border-box;
+  opacity: 0;
+  animation: blender 5s linear 50ms;
+}
+
+
+.imgWrapper {
+  width: 70vw;
+  height: 50vh;
+  margin: auto;
+}
+
+.home-img {
+  max-width: 50%;
+}
+@keyframes blender {
+  0% {
+    opacity: 0;
+    transform: translate(-25px);
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-10px);
+  }
+}
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+  border-color: #5EA841 !important;
+}
+
+/*for change label color in focus state*/
+.MuiFormLabel-root.Mui-focused{
+  color: white !important;
+}
+
+
+
+.myImg {
+  width:50vw;
+  height:50vh;
+}
+
+@media only screen and (max-width: 760px) {
+  .imageActive {
+    
+  width: 80vw;
+  height: 40vh;
+  }
+  .myImg {
+    width:80vw;
+    height:40vh;
+  }
+  .myInput {
+    height: 5vh;
+    width:70%;
+    margin-bottom:2vh;
+    border-radius: 1vh;
+    padding-left:2vh;
+  }
+}
+

@@ -1,0 +1,92 @@
+{
+   
+	"id": "640f2df9fb4e2a859889997d",
+	"name": "Two bedroom apartment",
+	"imageUrls": [
+		"https://storage.cloud.google.com/sample-images1/ap8.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap10.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap11.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap13.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap14.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap15.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap16.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap3.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap4.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap6.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap5.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap7.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap9.jpg"
+	],
+	"price": [
+		{
+			"from": "1/11/2022",
+			"to": "31/3/2023",
+			"price": 80
+		},
+		{
+			"from": "1/4/2023",
+			"to": "30/6/2023",
+			"price": 100
+		},
+		{
+			"from": "1/7/2023",
+			"to": "31/8/2023",
+			"price": 160
+		},
+		{
+			"from": "1/9/2023",
+			"to": "31/10/2023",
+			"price": 80
+		}
+	],
+	"maxCount": 6,
+	"apartmentNumber": "5",
+	"currentbookings": [],
+	"description": "65m2 with living room, 2 bedrooms, bathroom, kitchen and outside grill, sun loungers on private terrace. On the pattio there is a private jacuzzi for 4 people. Can accommodate up to 6 people. Dinner and breakfast option available for additional fee. Bicycle, kayaks and taxi service can be arranged at the property. Table tennis, volleyballs and badminton set at your disposal. Sun loungers provided. Swimming pool is located on our sun deck with the beautiful sea-view ",
+	
+	"id": "640f2df9fb4e2a859889997d",
+	"name": "croatian Two bedroom apartment",
+	"imageUrls": [
+		"https://storage.cloud.google.com/sample-images1/ap8.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap10.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap11.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap13.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap14.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap15.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap16.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap3.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap4.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap6.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap5.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap7.jpg",
+		"https://storage.cloud.google.com/sample-images1/ap9.jpg"
+	],
+	"price": [
+		{
+			"from": "1/11/2022",
+			"to": "31/3/2023",
+			"price": 80
+		},
+		{
+			"from": "1/4/2023",
+			"to": "30/6/2023",
+			"price": 100
+		},
+		{
+			"from": "1/7/2023",
+			"to": "31/8/2023",
+			"price": 160
+		},
+		{
+			"from": "1/9/2023",
+			"to": "31/10/2023",
+			"price": 80
+		}
+	],
+	"maxCount": 6,
+	"apartmentNumber": "5",
+	"currentbookings": [],
+	"description": "croatian 65m2 with living room, 2 bedrooms, bathroom, kitchen and outside grill, sun loungers on private terrace. On the pattio there is a private jacuzzi for 4 people. Can accommodate up to 6 people. Dinner and breakfast option available for additional fee. Bicycle, kayaks and taxi service can be arranged at the property. Table tennis, volleyballs and badminton set at your disposal. Sun loungers provided. Swimming pool is located on our sun deck with the beautiful sea-view "
+	
+}
+
