@@ -45,7 +45,7 @@ const Accommodation = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await axios.get("/api/apartments/getallapartments");
+        const response = await axios.get("https://ruza-apartments.onrender.com/api/apartments/getallapartments");
         setRooms(response.data.rooms);
         setDuplicateRooms(response.data.rooms);
       } catch (error) {

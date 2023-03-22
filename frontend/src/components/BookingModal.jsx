@@ -43,7 +43,7 @@ const BookingModal = ({close}) => {
         try {
           
       
-            await axios.post("/api/bookings/admin/bookroom", newBooking);
+            await axios.post("https://ruza-apartments.onrender.com/api/bookings/admin/bookroom", newBooking);
            
             
           } catch (error) {

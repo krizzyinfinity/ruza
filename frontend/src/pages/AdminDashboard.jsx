@@ -9,7 +9,7 @@ const AdminDashboard = () => {
     email, password
  }
  try {
-    const result = await axios.post("/api/users/admin", admin).data
+    const result = await axios.post("https://ruza-apartments.onrender.com/api/users/admin", admin).data
     window.location.href = "/adminMain";
  } catch (error) {
     console.log(error)
