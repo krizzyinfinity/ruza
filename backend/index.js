@@ -31,9 +31,9 @@ app.use(i18n.init);
 //app.use(middleware.handle(i18next));
 
 
-app.use("https://ruza-apartments.onrender.com/api/users", adminRoute)
-app.use("https://ruza-apartments.onrender.com/api/apartments", roomsRoute)
-app.use("https://ruza-apartments.onrender.com/api/bookings", bookingsRoute)
+app.use("/api/users", adminRoute)
+app.use("/api/apartments", roomsRoute)
+app.use("/api/bookings", bookingsRoute)
 
 
 
