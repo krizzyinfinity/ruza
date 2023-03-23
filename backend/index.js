@@ -12,7 +12,7 @@ const roomModel = require("./models/apartments");
 // var i18next = require('i18next');
 // var Backend = require('i18next-fs-backend');
 // var middleware = require("i18next-http-middleware");
-
+const cors = require("cors")
 const i18n = new I18n({
  locales:['en', 'hr'],
  directory: path.join(__dirname,'translation'),
@@ -20,7 +20,12 @@ const i18n = new I18n({
 })
   
 
-app.use(express.json())
+app.use(express.json());
+app.use(cors());
+app.get("/", (req, res)=> {
+    res.setHeader("Access-Control-Allow-Credentials", "true")
+    res.send("is running")
+});
 app.use(i18n.init);
 // app.get("/api/apartments/getallapartments", async (req, res) => {
 //     //res.send({ name: res.__("name"), description: res.__("description")})
@@ -31,9 +36,9 @@ app.use(i18n.init);
 //app.use(middleware.handle(i18next));
 
 
-app.use("https://ruza-apartments.onrender.com/api/users", adminRoute)
-app.use("https://ruza-apartments.onrender.com/api/apartments", roomsRoute)
-app.use("https://ruza-apartments.onrender.com/api/bookings", bookingsRoute)
+app.use("/api/users", adminRoute)
+app.use("/api/apartments", roomsRoute)
+app.use("/api/bookings", bookingsRoute)
 
 
 
