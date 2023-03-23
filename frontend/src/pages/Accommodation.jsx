@@ -94,7 +94,7 @@ const Accommodation = () => {
     var availability = false;
     if (from < today || to < today) {
       alert(t("past"));
-      window.location.reload(true);
+      window.location.reload();
      
     }
 

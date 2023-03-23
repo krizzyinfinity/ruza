@@ -61,6 +61,7 @@ const Activities = () => {
           <a
             style={{ textDecoration: "none", color: "#af9a7d" }}
             href="https://naturainsula.com/"
+            target="_blank"
           >
             Natura Insula
           </a>
