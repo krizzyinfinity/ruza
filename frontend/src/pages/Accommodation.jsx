@@ -94,8 +94,8 @@ const Accommodation = () => {
     var availability = false;
     if (from < today || to < today) {
       alert(t("past"));
-      window.location.reload();
-     
+      //window.location.reload();
+      window.location.href = window.location.href;
     }
 
     for (const room of duplicateRooms) {
