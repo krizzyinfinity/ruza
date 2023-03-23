@@ -3,7 +3,9 @@ import Modal from '@mui/material/Modal';
 import { Box, Button, Typography } from '@mui/material';
 
 import CloseIcon from '@mui/icons-material/Close';
-const style = {
+
+const ModalComponent = ({open, handleOpen, rooms, handleClose}) => {
+  const style = {
     position: 'absolute',
     top: '50%',
     left: '50%',
@@ -20,7 +22,6 @@ justifyContent:"center",
     boxShadow: 24,
     p: 4,
   };
-const ModalComponent = ({open, handleOpen, rooms, handleClose}) => {
  
   return (
     <Modal

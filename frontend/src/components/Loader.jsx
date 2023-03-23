@@ -5,7 +5,7 @@ const Loader = () => {
       let [loading, setLoading] = useState(true);
       let [color, setColor] = useState("#af9a7d");      
   return (
-    <div style={{display:"flex", alignItems:"center", justifyContent:"center", height:"100vh"}} >
+    <div style={{display:"flex", alignItems:"center", justifyContent:"center", height:"90vh"}} >
       
       <RingLoader
         color={color}

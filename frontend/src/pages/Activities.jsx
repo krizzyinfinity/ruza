@@ -23,6 +23,13 @@ const Activities = () => {
       setCurrentSlide(0);
     }
   };
+  useEffect(()=> {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
+  },[])
   useEffect(() => {
     sliderInterval = setInterval(() => {
       switchImages();
@@ -32,8 +39,8 @@ const Activities = () => {
     };
   });
   return (
-    <Box sx={{ height: "100vh", paddingTop: 15 }}>
-      <Box className="imgWrapper">
+    <Box sx={{ height: "100vh",mb:5, paddingTop: 15 }}>
+      <Box className="imgWrapper" >
         {images.map((img, index) => {
           return (
             <img
@@ -46,9 +53,9 @@ const Activities = () => {
           );
         })}
       </Box>
-      <Box sx={{ marginBottom: 20 }}>
+      <Box >
         <Typography
-          sx={{ fontSize: { xs: 16, sm: 20, md: 20, lg: 20, xl: 30 }, m: 5 }}
+          sx={{ fontSize: { xs: 20, sm: 20, md: 22, lg: 25, xl: 28 }, mb:12, mt:{lg:10, xl:10, md:5, sm:5} }}
         >
           {t("activities1")}{" "}
           <a

@@ -5,12 +5,13 @@ import IconButton from "@mui/material/IconButton";
 import { Link } from "react-router-dom";
 import { Drawer, List, ListItem, ListItemText } from "@mui/material";
 import { useTranslation } from "react-i18next";
-const styles = {
-  textDecoration: "none",
-  color: "#af9a7d",
-};
 
 function DrawerComponent() {
+  const styles = {
+    textDecoration: "none",
+    color: "#af9a7d",
+  };
+  
   const { t } = useTranslation();
   const [openDrawer, setOpenDrawer] = useState(false);
   return (

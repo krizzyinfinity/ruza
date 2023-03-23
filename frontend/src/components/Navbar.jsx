@@ -11,19 +11,20 @@ import { Link } from "react-router-dom";
 import DrawerComponent from "./Drawer";
 import { useTranslation } from "react-i18next";
 
-const styles = {
-  textDecoration: "none",
-  fontSize: "110%",
-  color: "green",
-  cursor: "pointer",
-  marginLeft: 40,
-  "&:hover": {
-    color: "red",
-    borderBottom: "1px solid white",
-  },
-};
+
 
 const Navbar = () => {
+  const styles = {
+    textDecoration: "none",
+    fontSize: "110%",
+    color: "green",
+    cursor: "pointer",
+    marginLeft: 40,
+    "&:hover": {
+      color: "red",
+      borderBottom: "1px solid white",
+    },
+  };
   const { t } = useTranslation();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));

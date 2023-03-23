@@ -2,26 +2,28 @@ import React from "react";
 import Modal from "@mui/material/Modal";
 import { Box, Button, Typography } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "90vhw",
-  height: "100%",
 
-  overflow: "scroll",
-  display: "flex",
 
-  flexWrap: "wrap",
-  justifyContent: "center",
-
-  bgcolor: "white",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
 const ModalComponent2 = ({ open, rooms, handleClose }) => {
+  const style = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: "90vhw",
+    height: "100%",
+  
+    overflow: "scroll",
+    display: "flex",
+  
+    flexWrap: "wrap",
+    justifyContent: "center",
+  
+    bgcolor: "white",
+    border: "2px solid #000",
+    boxShadow: 24,
+    p: 4,
+  }
   return (
     <Modal
       open={open}

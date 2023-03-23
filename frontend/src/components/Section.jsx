@@ -51,13 +51,14 @@ const Section = () => {
           marginTop: 30,
         }}
       >
-        <Typography variant="h2">{t("amenities")}</Typography>
+        <Typography sx={{fontSize:{xs:40, sm:45, md:55, lg:55, xl:60}}} variant="h2">{t("amenities")}</Typography>
 
         <Box className="imgWrapper">
           {images.map((img, index) => {
             return (
               <img
                 src={img}
+                alt="amenities"
                 className={
                   index === currentSlide ? "imageActive homeImage" : "image"
                 }
@@ -67,7 +68,7 @@ const Section = () => {
         </Box>
         <Box sx={{ marginBottom: 20, marginTop: 5 }}>
           <Typography
-            sx={{ fontSize: { xs: 16, sm: 20, md: 20, lg: 20, xl: 30 }, m: 5 }}
+            sx={{ fontSize: { xs: 18, sm: 20, md: 20, lg: 20, xl: 30 }, m: 5 }}
           >
             {t("section1")}
             <Link
@@ -90,7 +91,7 @@ const Section = () => {
           marginTop: 30,
         }}
       >
-        <Typography variant="h2">{t("accommodation")}</Typography>
+        <Typography sx={{fontSize:{xs:40, sm:45, md:55, lg:55, xl:60}}} variant="h2">{t("accommodation")}</Typography>
 
         <Box className="imgWrapper">
           {images2.map((img, index) => {
@@ -107,7 +108,7 @@ const Section = () => {
         </Box>
         <Box sx={{ marginBottom: 20, marginTop: 5 }}>
           <Typography
-            sx={{ fontSize: { xs: 16, sm: 20, md: 20, lg: 20, xl: 30 }, m: 5 }}
+            sx={{ fontSize: { xs: 18, sm: 20, md: 20, lg: 20, xl: 30 }, m: 5 }}
           >
             {t("section2")}
             <Link

@@ -21,6 +21,13 @@ const BookingForm = () => {
   const isInitialRender = React.useRef(true);
   const totalAmount = totalNights * seasonPrice;
   const { t } = useTranslation();
+  useEffect(()=> {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
+  },[])
   
   useEffect(() => {
     const fetchData = async () => {

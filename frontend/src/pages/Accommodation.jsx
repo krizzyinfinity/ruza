@@ -36,10 +36,17 @@ const Accommodation = () => {
   const [duplicateRooms, setDuplicateRooms] = useState([]);
   const theme = useTheme();
 
-  const [people, setPeople] = useState();
+  const [people, setPeople] = useState(2);
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const [fromDate, setFromDate] = useState();
   const [toDate, setToDate] = useState();
+  useEffect(()=> {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
+  },[])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -88,6 +95,7 @@ const Accommodation = () => {
     if (from < today || to < today) {
       alert(t("past"));
       window.location.reload(true);
+     
     }
 
     for (const room of duplicateRooms) {
@@ -128,7 +136,7 @@ const Accommodation = () => {
       {console.log("today", today)}
       {!isOpen && (
         <Button
-          style={{ backgroundColor: "olive", color: "black", padding: 5 }}
+          style={{ backgroundColor: "olive", color: "black", padding: 5, marginBottom:10 }}
           onClick={() => setIsOpen(!isOpen)}
         >
           {t("availability")}
@@ -203,24 +211,24 @@ const Accommodation = () => {
                       />
                     </Box>
 
-                    <Typography variant="h7">
+                    <Typography variant="h6">
                       <span style={{ fontWeight: "bold" }}>{t("desc")}:</span>
                     </Typography>
 
-                    <Typography variant="h7" sx={{ marginBottom: 2 }}>
+                    <Typography variant="h6" sx={{ marginBottom: 2 }}>
                       {room.translations[1].lng == navigator.languages[0]
                         ? room.translations[1].description
                         : room.translations[0].description}
                     </Typography>
 
-                    <Typography variant="h7" sx={{ marginBottom: 2 }}>
+                    <Typography variant="h6" sx={{ marginBottom: 2 }}>
                       <span style={{ fontWeight: "bold" }}>
                         {t("noOfPeople")}:
                       </span>{" "}
                       {room.maxCount}
                     </Typography>
 
-                    <Typography variant="h7" sx={{ marginBottom: 2 }}>
+                    <Typography variant="h6" sx={{ marginBottom: 2 }}>
                       <span style={{ fontWeight: "bold" }}>
                         {t("basePrice")}:
                       </span>{" "}

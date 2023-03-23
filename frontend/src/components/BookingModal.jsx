@@ -1,7 +1,10 @@
 import { Box, Button, Typography } from '@mui/material'
 import axios from 'axios';
 import React, { useState } from 'react'
-const style = {
+
+
+const BookingModal = ({close}) => {
+  const style = {
     position: "absolute",
     top: "50%",
     left: "50%",
@@ -19,8 +22,6 @@ const style = {
     p: 7,
     
   };
-
-const BookingModal = ({close}) => {
     const [from , setFrom ]= useState("");
     const [to , setTo ]= useState("");
     const [people , setPeople ]= useState(0);
