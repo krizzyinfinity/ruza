@@ -59,7 +59,7 @@ village:"Small village for a big vacation!",
 wrong:"Something went wrong. Please try later!",
 
 past: "Cannot choose dates in the past!",
-
+currentWeather:"Current weather in Dragove:"
 
 
         }
@@ -105,7 +105,7 @@ village:"Malo mjesto za vrhunski odmor!",
 wrong:"Dogodila se pogreška. Molimo pokušajte ponovo kasnije!",
 
 past:"Ne možete birati datume u prošlosti!",
-
+currentWeather:"Trenutna temperatura u Dragovama:"
 
         }
        

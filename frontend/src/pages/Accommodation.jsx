@@ -19,7 +19,7 @@ import ModalComponent from "../components/Modal";
 import ModalComponent2 from "../components/Modal2";
 import { Link } from "react-router-dom";
 import Loader from "../components/Loader";
-
+import image from "../images/preuzmi.jfif"
 import { useTranslation } from "react-i18next";
 
 const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
@@ -240,7 +240,7 @@ const Accommodation = () => {
                       >
                         <img
                           alt="apartment"
-                          src={room.imageUrls[0]}
+                          src={ room.imageUrls[0]}
                           style={{ height: 200, width: "100vw" }}
                         />
                       </motion.div>

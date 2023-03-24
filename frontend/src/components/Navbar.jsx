@@ -77,7 +77,7 @@ const Navbar = () => {
               variant="h4"
             >
               <Link 
-              style={color? {textDecoration:"none", color:"white"} : {textDecoration:"none",color:"olive"}} to="/">
+              style={color? {textDecoration:"none", color:"white"} : {textDecoration:"none",color:"green"}} to="/">
                 {t("ruza")}
               </Link>
             </Typography>

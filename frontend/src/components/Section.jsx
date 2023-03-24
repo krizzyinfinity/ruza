@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
@@ -17,11 +17,16 @@ import tennis from "../images/tennis.jpeg";
 import jacuzzi from "../images/jacuzzi.jpg";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import axios from "axios";
 const Section = () => {
+  const API_KEY = process.env.REACT_APP_WEATHER_API;
+  const[weather, setWeather] = useState()
   const { t } = useTranslation();
   const images = [badgmintom, cinema, sauna, pool, tennis, jacuzzi];
   const images2 = [ap1, ap2, ap3, ap4, ap5, ap6, ap7];
   const [currentSlide, setCurrentSlide] = useState(0);
+  const[weatherImg, setWeatherImg] = useState(null)
+  let units = "metric";
   // useRef does not cause a re-render
   let sliderInterval = useRef();
   let switchImages = () => {
@@ -31,6 +36,21 @@ const Section = () => {
       setCurrentSlide(0);
     }
   };
+  
+  useEffect(()=> {
+    const fetchData = async ()=> {
+      try {
+      const response =   await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=44.1126&lon=14.9331&units=${units}&appid=${API_KEY}`)
+      setWeather(response.data.main.temp)
+      console.log(response.data.main.temp)
+      setWeatherImg(response.data.weather[0].icon) 
+
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    fetchData()
+  },[])
   useEffect(() => {
     sliderInterval = setInterval(() => {
       switchImages();
@@ -39,6 +59,7 @@ const Section = () => {
       clearInterval(sliderInterval);
     };
   });
+ 
   return (
     <>
       <Box
@@ -51,6 +72,10 @@ const Section = () => {
           marginTop: 30,
         }}
       >
+<Grid sx={{ alignItems:"center",mb:2, mt:{xs:20, lg:2}}}>
+        <Typography sx={{fontSize:{lg:"180%", xs:"160%", sm:"160%", md:"180%"}, color:"#af9a7d",}}>{t("currentWeather")} <span style={{fontStyle:"oblique", color:"black"}}>{Math.round(weather)} °C</span></Typography>
+        <img style={{width:"12%", height:"10vh"}} src ={`http://openweathermap.org/img/w/${weatherImg}.png`} alt="wthr img" />
+        </Grid>
         <Typography sx={{fontSize:{xs:40, sm:45, md:55, lg:55, xl:60}}} variant="h2">{t("amenities")}</Typography>
 
         <Box className="imgWrapper">
