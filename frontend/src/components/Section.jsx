@@ -70,9 +70,10 @@ const Section = () => {
           justifyContent: "center",
           flexDirection: "column",
           marginTop: 30,
+          mb:10
         }}
       >
-<Grid sx={{ alignItems:"center",mb:2, mt:{xs:20, lg:2}}}>
+<Grid sx={{ alignItems:"center",pl:5,pr:5, mt:{xs:20, lg:2}}}>
         <Typography sx={{fontSize:{lg:"180%", xs:"160%", sm:"160%", md:"180%"}, color:"#af9a7d",}}>{t("currentWeather")} <span style={{fontStyle:"oblique", color:"black"}}>{Math.round(weather)} °C</span></Typography>
         <img style={{width:"12%", height:"10vh"}} src ={`http://openweathermap.org/img/w/${weatherImg}.png`} alt="wthr img" />
         </Grid>
@@ -113,7 +114,7 @@ const Section = () => {
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "column",
-          marginTop: 30,
+          marginTop:{xs:45, sm:20, md:10, lg:20, xl:20},
         }}
       >
         <Typography sx={{fontSize:{xs:40, sm:45, md:55, lg:55, xl:60}}} variant="h2">{t("accommodation")}</Typography>
