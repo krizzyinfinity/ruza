@@ -13,8 +13,11 @@ import { useTranslation } from "react-i18next";
 
 
 
+
 const Navbar = () => {
+  
   const styles = {
+   
     textDecoration: "none",
     fontSize: "110%",
     color: "green",
@@ -24,16 +27,40 @@ const Navbar = () => {
       color: "red",
       borderBottom: "1px solid white",
     },
+   
   };
+
+  const myStyle = {
+    textDecoration: "none",
+    fontSize: "110%",
+    color: "white",
+    cursor: "pointer",
+    marginLeft: 40,
+    "&:hover": {
+      color: "red",
+      borderBottom: "1px solid white",
+    },
+  }
   const { t } = useTranslation();
+  const [color, setColor] = React.useState(false)
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const changeColor = ()=> {
+    if(window.scrollY > 90 ) {
+      setColor(true)
+    }else {
+      setColor(false)
+    }
+  }
+
+  window.addEventListener("scroll", changeColor);
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
         position="fixed"
-        style={{ background: "transparent", zIndex: 999 }}
+        style={ color ? { backgroundColor:'rgba(0,0,0,.9)', color:"white"} : {backgroundColor:"transparent"}}
+     
       >
         <Toolbar>
           <Grid
@@ -45,10 +72,12 @@ const Navbar = () => {
             }}
           >
             <Typography
-              style={{ fontSize: "160%", color: "olive" }}
+              style={{ fontSize: "160%", color: "green" }}
+             
               variant="h4"
             >
-              <Link style={{ textDecoration: "none", color: "green" }} to="/">
+              <Link 
+              style={color? {textDecoration:"none", color:"white"} : {textDecoration:"none",color:"olive"}} to="/">
                 {t("ruza")}
               </Link>
             </Typography>
@@ -56,17 +85,17 @@ const Navbar = () => {
               <DrawerComponent />
             ) : (
               <Box>
-                <Link to="/" style={styles}>
+                <Link to="/" style={ color ? myStyle : styles}>
                   {t("home")}
                 </Link>
 
-                <Link style={styles} to="/about">
+                <Link style={ color ? myStyle : styles} to="/about">
                   {t("aboutUs")}
                 </Link>
-                <Link style={styles} to="/activities">
+                <Link style={ color ? myStyle : styles} to="/activities">
                   {t("activities")}
                 </Link>
-                <Link style={styles} to="/accommodation">
+                <Link style={ color ? myStyle : styles} to="/accommodation">
                   {t("accommodation")}
                 </Link>
               </Box>

@@ -7,10 +7,12 @@ import { Drawer, List, ListItem, ListItemText } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
 function DrawerComponent() {
+  
   const styles = {
     textDecoration: "none",
     color: "#af9a7d",
   };
+ 
   
   const { t } = useTranslation();
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -40,21 +42,21 @@ function DrawerComponent() {
 
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link style={styles} to="/about">
+              <Link style={ styles} to="/about">
                 {t("aboutUs")}
               </Link>
             </ListItemText>
           </ListItem>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link style={styles} to="/activities">
+              <Link style={ styles} to="/activities">
                 {t("activities")}
               </Link>
             </ListItemText>
           </ListItem>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link style={styles} to="/accommodation">
+              <Link style={ styles} to="/accommodation">
                 {t("accommodation")}
               </Link>
             </ListItemText>

@@ -13,6 +13,7 @@
   overflow: hidden;
   background-image:  url("../src/images/pic1.jpg");
 }
+
 .div1 {
   overflow: hidden; 
   background-image:  url("../src/images/mamtat.jpg");
@@ -90,6 +91,22 @@ tr:not(:first-child):not(:last-child) th {
 .home-img {
   max-width: 50%;
 }
+@keyframes slideInLeft {
+  from{
+    transform: translateX(-300px);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+.myAnimation {
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+}
+
 @keyframes blender {
   0% {
     opacity: 0;
@@ -106,6 +123,7 @@ tr:not(:first-child):not(:last-child) th {
     transform: translate(-10px);
   }
 }
+
 .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
   border-color: #5EA841 !important;
 }

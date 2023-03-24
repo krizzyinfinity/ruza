@@ -67,7 +67,7 @@ const Section = () => {
           })}
         </Box>
         <Box sx={{ marginBottom: 20, marginTop: 5 }}>
-          <Typography
+          <Typography 
             sx={{ fontSize: { xs: 18, sm: 20, md: 20, lg: 20, xl: 30 }, m: 5 }}
           >
             {t("section1")}

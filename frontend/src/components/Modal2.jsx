@@ -35,11 +35,11 @@ const ModalComponent2 = ({ open, rooms, handleClose }) => {
         <Button
           style={{
             position: "absolute",
-            top: 5,
-            right: 10,
+            top: 19,
+            right: 45,
             backgroundColor: "olive",
             borderRadius: 60,
-            padding: 12,
+            padding: 10,
             color: "black",
           }}
           onClick={handleClose}
@@ -52,7 +52,7 @@ const ModalComponent2 = ({ open, rooms, handleClose }) => {
               <img
                 src={image}
                 alt="apartment"
-                style={{ width: 300, height: 150, margin: 4 }}
+                style={{ width: 300, height: 150, margin: 8 }}
               />
             </Box>
           );

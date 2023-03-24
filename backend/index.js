@@ -35,7 +35,6 @@ app.use(i18n.init);
 
 //app.use(middleware.handle(i18next));
 
-
 app.use("/api/users", adminRoute)
 app.use("/api/apartments", roomsRoute)
 app.use("/api/bookings", bookingsRoute)

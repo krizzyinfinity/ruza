@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+
 import {
   Box,
   Button,
@@ -20,6 +22,9 @@ import Loader from "../components/Loader";
 
 import { useTranslation } from "react-i18next";
 
+const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
+const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
+
 const Accommodation = () => {
   const { RangePicker } = DatePicker;
   const [error, setError] = useState(false);
@@ -40,19 +45,22 @@ const Accommodation = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const [fromDate, setFromDate] = useState();
   const [toDate, setToDate] = useState();
-  useEffect(()=> {
+
+  useEffect(() => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
-  },[])
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await axios.get("https://ruza-apartments.onrender.com/api/apartments/getallapartments");
+        const response = await axios.get(
+          "https://ruza-apartments.onrender.com/api/apartments/getallapartments"
+        );
         setRooms(response.data.rooms);
         setDuplicateRooms(response.data.rooms);
       } catch (error) {
@@ -92,10 +100,14 @@ const Accommodation = () => {
     setToDate(to);
     var tempRooms = [];
     var availability = false;
-    if (from < today || to < today) {
+    if (
+      moment(dates[0].$d).format("DD-MM-YYYY") <
+        new Date().toISOString().slice(0, -14) ||
+      moment(dates[1].$d).format("DD-MM-YYYY") <
+        new Date().toISOString().slice(0, -14)
+    ) {
       alert(t("past"));
       //window.location.reload();
-    
     }
 
     for (const room of duplicateRooms) {
@@ -128,7 +140,16 @@ const Accommodation = () => {
 
       setRooms(tempRooms);
     }
-   
+  };
+  const containerVariants = {
+    offscreen: {
+      WebkitMaskImage: hiddenMask,
+      maskImage: hiddenMask,
+    },
+    onscreen: {
+      WebkitMaskImage: visibleMask,
+      maskImage: visibleMask,
+    },
   };
 
   return (
@@ -136,7 +157,12 @@ const Accommodation = () => {
       {console.log("today", today)}
       {!isOpen && (
         <Button
-          style={{ backgroundColor: "olive", color: "black", padding: 5, marginBottom:10 }}
+          style={{
+            backgroundColor: "olive",
+            color: "black",
+            padding: 5,
+            marginBottom: 10,
+          }}
           onClick={() => setIsOpen(!isOpen)}
         >
           {t("availability")}
@@ -205,10 +231,19 @@ const Accommodation = () => {
                     }}
                   >
                     <Box sx={{ marginBottom: 4 }}>
-                      <img
-                        src={room.imageUrls[0]}
-                        style={{ height: 200, width: "100vw" }}
-                      />
+                      <motion.div
+                        whileInView="onscreen"
+                        variants={containerVariants}
+                        initial="offscreen"
+                        transition={{ duration: 1, delay: 1 }}
+                        viewport={{ once: true }}
+                      >
+                        <img
+                          alt="apartment"
+                          src={room.imageUrls[0]}
+                          style={{ height: 200, width: "100vw" }}
+                        />
+                      </motion.div>
                     </Box>
 
                     <Typography variant="h6">
@@ -280,16 +315,29 @@ const Accommodation = () => {
                       flexDirection: "row",
                       alignItems: "left",
                       justifyContent: "space-between",
-                      minHeight: 430,
-                      margin: 10,
+                      minHeight: 400,
+
+                      margin: 4,
                     }}
                   >
-                    <Box>
+                    <motion.div
+                      whileInView="onscreen"
+                      variants={containerVariants}
+                      initial="offscreen"
+                      transition={{ duration: 1, delay: 1 }}
+                      viewport={{ once: true }}
+                    >
                       <img
                         src={room.imageUrls[0]}
-                        style={{ height: 400, width: 500 }}
+                        alt="apartment"
+                        style={{
+                          height: 450,
+                          width: 500,
+                          marginTop: 40,
+                          marginLeft: 20,
+                        }}
                       />
-                    </Box>
+                    </motion.div>
 
                     <Box
                       sx={{
@@ -302,6 +350,7 @@ const Accommodation = () => {
                       <Typography variant="h5">
                         <span style={{ fontWeight: "bold" }}>{t("desc")}:</span>
                       </Typography>
+
                       <Typography variant="h5" sx={{ marginBottom: 5 }}>
                         {room.translations[1].lng == navigator.languages[0]
                           ? room.translations[1].description
@@ -321,11 +370,14 @@ const Accommodation = () => {
                         </span>{" "}
                         {room.price[0].price}€
                       </Typography>
+
                       <Box
                         sx={{
                           display: "flex",
                           flexDirection: "row",
                           marginLeft: 50,
+                         
+
                         }}
                       >
                         <Button
@@ -341,12 +393,7 @@ const Accommodation = () => {
                         >
                           {t("morePictures")}
                         </Button>
-                        <ModalComponent
-                          rooms={single}
-                          handleOpen={handleOpen}
-                          handleClose={handleClose}
-                          open={open}
-                        />
+
                         {fromDate && toDate && people && (
                           <Link
                             style={{ textDecoration: "none" }}
@@ -365,7 +412,13 @@ const Accommodation = () => {
                           </Link>
                         )}
                       </Box>
-                    </Box>
+                   </Box>
+                    <ModalComponent
+                      rooms={single}
+                      handleOpen={handleOpen}
+                      handleClose={handleClose}
+                      open={open}
+                    />
                   </Paper>
                 )}
               </>

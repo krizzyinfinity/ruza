@@ -19,7 +19,7 @@ router.post("/bookroom", async (req, res) => {
       email: token.email,
       source: token.id,
     });
-   
+
     const payment = await stripe.charges.create(
       {
         amount: totalAmount * 100,
@@ -38,9 +38,9 @@ router.post("/bookroom", async (req, res) => {
         roomid: room._id,
         // fromDate: moment(fromDate, "DD/MM/YYYY"),
         // toDate: moment(toDate, "DD/MM/YYYY"),
-         
-      fromDate: moment(fromDate).format("DD-MM-YYYY"),
-      toDate: moment(toDate).format("DD-MM-YYYY"),
+
+        fromDate: moment(fromDate).format("DD-MM-YYYY"),
+        toDate: moment(toDate).format("DD-MM-YYYY"),
         people,
         totalAmount,
         totalNights,
@@ -52,71 +52,68 @@ router.post("/bookroom", async (req, res) => {
         bookingid: booking._id,
         // fromDate: moment(fromDate, "DD/MM/YYYY")._i,
         // toDate: moment(toDate, "DD/MM/YYYY")._i,
-         
-      fromDate: moment(fromDate).format("DD-MM-YYYY"),
-      toDate: moment(toDate).format("DD-MM-YYYY"),
+
+        fromDate: moment(fromDate).format("DD-MM-YYYY"),
+        toDate: moment(toDate).format("DD-MM-YYYY"),
         transactionid: booking.transactionId,
 
         status: "booked",
       });
       await roomBooked.save();
     }
-    res.send({message: req.t("payment_successful")});
+    res.send({ message: req.t("payment_successful") });
   } catch (error) {
-    return     res.send(res.t("payment_unsuccessful"));
+    return res.send(res.t("payment_unsuccessful"));
     //res.status(400).json({ error });
-
   }
-
 });
-router.get("/getallbookings", async(req, res) => {
+router.get("/getallbookings", async (req, res) => {
   try {
-   const bookings = await Booking.find({})
-   return res.json({bookings});
+    const bookings = await Booking.find({});
+    return res.json({ bookings });
   } catch (error) {
-   return res.status(400).json({message: error})
+    return res.status(400).json({ message: error });
   }
 });
-
 
 router.post("/admin/bookroom", async (req, res) => {
-  const { name, from, to, totalAmount, totalNights, people, id } =
-    req.body;
+  const { name, from, to, totalAmount, totalNights, people, id } = req.body;
+  
 
-    
 
 
   try {
-   const newBooking = new Booking({
-        room: name,
-        roomid: id,
-      
-        fromDate: moment(from).format("DD-MM-YYYY"),
-        toDate: moment(to).format("DD-MM-YYYY"),
-        people,
-        totalAmount,
-        totalNights,
-        
-      });
-      const booking = await newBooking.save();
-      const roomBooked = await Room.findOneAndUpdate({ _id: id });
-      roomBooked.currentbookings.push({
-        bookingid: booking._id,
-        
+    const newBooking = new Booking({
+      room: name,
+      roomid: id,
+
       fromDate: moment(from).format("DD-MM-YYYY"),
       toDate: moment(to).format("DD-MM-YYYY"),
-        transactionid: "null",
+      people,
+      totalAmount,
+      totalNights,
+    });
 
-        status: "booked",
-      });
-      await roomBooked.save();
-   
-    res.send({message: "Booking saved"});
+    const booking = await newBooking.save();
+
+    const roomBooked = await Room.findOneAndUpdate({ _id: id });
+
+    roomBooked.currentbookings.push({
+      bookingid: booking._id,
+
+      fromDate: moment(from).format("DD-MM-YYYY"),
+      toDate: moment(to).format("DD-MM-YYYY"),
+      transactionid: "null",
+
+      status: "booked",
+    });
+
+    await roomBooked.save();
+
+    res.send({ message: "Booking saved" });
   } catch (error) {
-    return   res.status(400).json({ error });
-
+    return res.status(400).json({ error });
   }
-
 });
 
 module.exports = router;
