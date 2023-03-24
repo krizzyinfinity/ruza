@@ -100,15 +100,15 @@ const Accommodation = () => {
     setToDate(to);
     var tempRooms = [];
     var availability = false;
-    if (
-      moment(dates[0].$d).format("DD-MM-YYYY") <
-        new Date().toISOString().slice(0, -14) ||
-      moment(dates[1].$d).format("DD-MM-YYYY") <
-        new Date().toISOString().slice(0, -14)
-    ) {
-      alert(t("past"));
-      //window.location.reload();
-    }
+    // if (
+    //   moment(dates[0].$d).format("DD-MM-YYYY") <
+    //     new Date().toISOString().slice(0, -14) ||
+    //   moment(dates[1].$d).format("DD-MM-YYYY") <
+    //     new Date().toISOString().slice(0, -14)
+    // ) {
+    //   alert(t("past"));
+    //   //window.location.reload();
+    // }
 
     for (const room of duplicateRooms) {
       if (room.currentbookings.length > 0) {
