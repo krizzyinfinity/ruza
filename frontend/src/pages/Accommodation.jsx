@@ -46,13 +46,7 @@ const Accommodation = () => {
   const [fromDate, setFromDate] = useState();
   const [toDate, setToDate] = useState();
 
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  }, []);
+ 
 
   useEffect(() => {
     const fetchData = async () => {

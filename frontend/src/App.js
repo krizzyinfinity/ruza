@@ -13,22 +13,18 @@ import AdminDashboard from './pages/AdminDashboard';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import AdminMain from './pages/AdminMain';
+import ScrollToTop from './components/ScrollToTop';
 function App() {
   const { i18n } = useTranslation();
   useEffect(() => {
     const lang = navigator.language;
     i18n.changeLanguage(lang);
   }, []);
-  useEffect(()=> {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth"
-    });
-  },[])
+ 
   return (
     <div className="App">
       <Navbar/>
+      <ScrollToTop/>
       <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/about" element={<About />} />
