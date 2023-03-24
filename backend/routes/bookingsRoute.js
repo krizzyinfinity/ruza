@@ -47,7 +47,7 @@ router.post("/bookroom", async (req, res) => {
         transactionId: "1234",
       });
       const booking = await newBooking.save();
-      const roomBooked = await Room.findOneAndUpdate({ _id: room._id });
+      const roomBooked = await Room.findOne({ _id: room._id });
       roomBooked.currentbookings.push({
         bookingid: booking._id,
         // fromDate: moment(fromDate, "DD/MM/YYYY")._i,
@@ -96,7 +96,7 @@ router.post("/admin/bookroom", async (req, res) => {
 
     const booking = await newBooking.save();
 
-    const roomBooked = await Room.findOneAndUpdate({ _id: id });
+    const roomBooked = await Room.findOne({ _id: id });
 
     roomBooked.currentbookings.push({
       bookingid: booking._id,
