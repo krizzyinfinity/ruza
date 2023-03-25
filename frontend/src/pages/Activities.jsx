@@ -33,7 +33,7 @@ const Activities = () => {
     };
   });
   return (
-    <Box sx={{ height: "100vh",mb:5, paddingTop: 15 }}>
+    <Box sx={{ height: "100vh",mb:15, paddingTop: 15 }}>
       <Box className="imgWrapper" >
         {images.map((img, index) => {
           return (
@@ -47,7 +47,7 @@ const Activities = () => {
           );
         })}
       </Box>
-      <Box sx={{p:4}} >
+      <Box sx={{p:3}} >
         <Typography
           sx={{ fontSize: { xs: 20, sm: 20, md: 22, lg: 25, xl: 28 }, mb:12, mt:{lg:10, xl:10, md:5, sm:5} }}
         >
