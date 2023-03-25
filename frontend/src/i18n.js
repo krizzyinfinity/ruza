@@ -32,7 +32,7 @@ i18n
           noOfPeople:"Number of people",
           totalAmount:"Total amount",
           payNow:" Pay now",
-          activities1: "Looking for an active holiday? Search no more!We offer kayak rentals, aquaglide 4.1 for windy days, paddle boards, bikes and much more!Grab a discount on all activities when you stay with us! Check out our webpage",
+          activities1: "Looking for an active holiday? Search no more! We offer kayak rentals, aquaglide 4.1 for windy days, paddle boards, bikes and much more! Grab a discount on all activities when you stay with us! Check out our webpage",
           acc1: "You need to book two small apartments to fit that many people in case two bedroom apartment is not available. Bear in mind that 2 beds are in the same room. You will have to make two separate bookings.If you have any trouble with the reservation, please send us an email.",
           acc3:"You need to book three small apartments to fit that many people. You have to make three separate bookings. If you have any trouble with the reservation, please send us an email",
           acc5:"Please have in mind that our small apartments have space for 2 people only plus a child. For large groups, please send us an email and we will come back to you with an offer based on availability",
