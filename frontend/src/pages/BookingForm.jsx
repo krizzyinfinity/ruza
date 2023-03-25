@@ -119,7 +119,7 @@ const BookingForm = () => {
               }}
             >
               
-{t("roomName")}: {room[0].translations[1].lng == navigator.languages[0] ? room[0].translations[1].name : room[0].translations[0].name}
+{room[0].translations[1].lng == navigator.languages[0] ? room[0].translations[1].name : room[0].translations[0].name}
                   
             </Typography>
 

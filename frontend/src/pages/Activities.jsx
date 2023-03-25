@@ -47,7 +47,7 @@ const Activities = () => {
           );
         })}
       </Box>
-      <Box >
+      <Box sx={{p:4}} >
         <Typography
           sx={{ fontSize: { xs: 20, sm: 20, md: 22, lg: 25, xl: 28 }, mb:12, mt:{lg:10, xl:10, md:5, sm:5} }}
         >
