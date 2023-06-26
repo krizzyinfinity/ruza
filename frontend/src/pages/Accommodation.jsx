@@ -19,7 +19,7 @@ import ModalComponent from "../components/Modal";
 import ModalComponent2 from "../components/Modal2";
 import { Link } from "react-router-dom";
 import Loader from "../components/Loader";
-import image from "../images/preuzmi.jfif"
+import image from "../images/preuzmi.jfif";
 import { useTranslation } from "react-i18next";
 
 const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
@@ -35,6 +35,8 @@ const Accommodation = () => {
   const handleOpen = () => {
     setOpen(true);
   };
+  const format = "DD-MM-YYYY";
+  const date1 = moment();
   const [open, setOpen] = useState(false);
   const handleClose = () => setOpen(false);
   const [rooms, setRooms] = useState([]);
@@ -45,8 +47,6 @@ const Accommodation = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const [fromDate, setFromDate] = useState();
   const [toDate, setToDate] = useState();
-
- 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -84,7 +84,7 @@ const Accommodation = () => {
   if (people > 8 && people <= 15) {
     alert(t("acc5"));
   }
-  const today = new Date().toISOString().slice(0, -14);
+  //const today = new Date().toISOString().slice(0, -14);
 
   const filterByDate = (dates) => {
     const from = moment(dates[0].$d).format("DD-MM-YYYY");
@@ -108,33 +108,34 @@ const Accommodation = () => {
       if (room.currentbookings.length > 0) {
         for (const booking of room.currentbookings) {
           if (
-            !moment(moment(dates[0].$d).format("DD-MM-YYYY")).isBetween(
+            !moment(dates[0].$d).isBetween(
               booking.fromDate,
-              booking.toDate
+              booking.toDate,
+              undefined,
+              "[]"
             ) &&
-            !moment(moment(dates[1].$d).format("DD-MM-YYYY")).isBetween(
-              booking.fromDate,
-              booking.toDate
+             !moment(dates[1].$d).isBetween(
+               booking.fromDate,
+               booking.toDate,
+              undefined,
+               "[]"
+             )
             )
-          ) {
-            if (
-              moment(dates[0].$d).format("DD-MM-YYYY") !== booking.fromDate &&
-              moment(dates[0].$d).format("DD-MM-YYYY") !== booking.toDate &&
-              moment(dates[1].$d).format("DD-MM-YYYY") !== booking.fromDate &&
-              moment(dates[1].$d).format("DD-MM-YYYY") !== booking.toDate
-            ) {
-              availability = true;
-            }
+          {
+            availability = true;
+           console.log("avail", availability)
           }
+        
         }
       }
-      if (availability == true || room.currentbookings.length === 0) {
+      if (availability || room.currentbookings.length === 0) {
         tempRooms.push(room);
       }
 
       setRooms(tempRooms);
     }
   };
+  console.log(rooms, "booking");
   const containerVariants = {
     offscreen: {
       WebkitMaskImage: hiddenMask,
@@ -148,7 +149,6 @@ const Accommodation = () => {
 
   return (
     <Box sx={{ marginTop: 10 }}>
-      {console.log("today", today)}
       {!isOpen && (
         <Button
           style={{
@@ -234,7 +234,7 @@ const Accommodation = () => {
                       >
                         <img
                           alt="apartment"
-                          src={ room.imageUrls[0]}
+                          src={room.imageUrls[0]}
                           style={{ height: 200, width: "100vw" }}
                         />
                       </motion.div>
@@ -370,8 +370,6 @@ const Accommodation = () => {
                           display: "flex",
                           flexDirection: "row",
                           marginLeft: 50,
-                         
-
                         }}
                       >
                         <Button
@@ -406,7 +404,7 @@ const Accommodation = () => {
                           </Link>
                         )}
                       </Box>
-                   </Box>
+                    </Box>
                     <ModalComponent
                       rooms={single}
                       handleOpen={handleOpen}

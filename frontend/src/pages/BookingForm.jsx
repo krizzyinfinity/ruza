@@ -30,7 +30,7 @@ const BookingForm = () => {
         const data = (
           await axios.post("https://ruza-apartments.onrender.com/api/apartments/getroombyid", { roomid: roomid })
         ).data;
-        console.log("from date", moment(fromDate, "DD-MM-YYYY")._i);
+      
         isInitialRender.current = false;
         setRoom(Object.values(data));
 
