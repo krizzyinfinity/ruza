@@ -14,6 +14,7 @@ import cinema from "../images/cinema.jpeg";
 import sauna from "../images/sauna.jpg";
 import pool from "../images/pool.jpg";
 import pool3 from "../images/pool3.jpg";
+import poolTr from "../images/poolTr.jpg";
 import tennis from "../images/tennis.jpeg";
 import jacuzzi from "../images/jacuzzi.jpg";
 import { Link } from "react-router-dom";
@@ -23,7 +24,7 @@ const Section = () => {
   const API_KEY = process.env.REACT_APP_WEATHER_API;
   const[weather, setWeather] = useState()
   const { t } = useTranslation();
-  const images = [badgmintom, cinema, sauna, pool, tennis, jacuzzi, pool3];
+  const images = [badgmintom, cinema, sauna, pool, tennis, jacuzzi, pool3, poolTr];
   const images2 = [ap1, ap2, ap3, ap4, ap5, ap6, ap7];
   const [currentSlide, setCurrentSlide] = useState(0);
   const[weatherImg, setWeatherImg] = useState(null)
