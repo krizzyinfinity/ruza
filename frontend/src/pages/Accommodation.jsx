@@ -263,6 +263,12 @@ const Accommodation = () => {
                       </span>{" "}
                       {room.price[0].price}€
                     </Typography>
+                    <Typography variant="h6" sx={{ marginBottom: 2 }}>
+                      <span style={{ fontWeight: "bold" }}>
+                        {t("choosePrice")}
+                      </span>{" "}
+                      
+                    </Typography>
                     <Button
                       onClick={() => {
                         setOpen(true);
