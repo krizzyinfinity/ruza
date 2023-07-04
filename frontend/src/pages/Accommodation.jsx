@@ -256,7 +256,7 @@ const Accommodation = () => {
                       </span>{" "}
                       {room.maxCount}
                     </Typography>
-                    {!fromDate && !toDate && !people &&
+                    {!fromDate && !toDate &&
                     <>
                     <Typography variant="h6" sx={{ marginBottom: 2 }}>
                       <span style={{ fontWeight: "bold" }}>
@@ -366,7 +366,7 @@ const Accommodation = () => {
                         </span>{" "}
                         {room.maxCount}
                       </Typography>
-                      {!fromDate && !toDate && !people &&
+                      {!fromDate && !toDate &&
                       <>
                       <Typography variant="h5">
                         <span style={{ fontWeight: "bold" }}>
