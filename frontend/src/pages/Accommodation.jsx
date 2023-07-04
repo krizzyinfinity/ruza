@@ -256,7 +256,8 @@ const Accommodation = () => {
                       </span>{" "}
                       {room.maxCount}
                     </Typography>
-
+                    {!fromDate && !toDate && !people &&
+                    <>
                     <Typography variant="h6" sx={{ marginBottom: 2 }}>
                       <span style={{ fontWeight: "bold" }}>
                         {t("basePrice")}:
@@ -269,6 +270,8 @@ const Accommodation = () => {
                       </span>{" "}
                       
                     </Typography>
+                    </>
+          }
                     <Button
                       onClick={() => {
                         setOpen(true);
@@ -363,7 +366,8 @@ const Accommodation = () => {
                         </span>{" "}
                         {room.maxCount}
                       </Typography>
-
+                      {!fromDate && !toDate && !people &&
+                      <>
                       <Typography variant="h5">
                         <span style={{ fontWeight: "bold" }}>
                           {t("basePrice")}:
@@ -376,7 +380,8 @@ const Accommodation = () => {
                         </span>{" "}
                         
                       </Typography>
-
+                      </>
+          }
                       <Box
                         sx={{
                           display: "flex",
