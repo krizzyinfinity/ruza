@@ -13,6 +13,7 @@
   overflow: hidden;
   background-image:  url("../src/images/rsz_1pool_ruza.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .div1 {
