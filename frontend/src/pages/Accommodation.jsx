@@ -263,7 +263,7 @@ const Accommodation = () => {
                       </span>{" "}
                       {room.price[0].price}€
                     </Typography>
-                    <Typography variant="h6" sx={{ marginBottom: 2 }}>
+                    <Typography variant="h4" sx={{ marginBottom: 2 }}>
                       <span style={{ fontWeight: "bold" }}>
                         {t("choosePrice")}
                       </span>{" "}
@@ -370,7 +370,7 @@ const Accommodation = () => {
                         </span>{" "}
                         {room.price[0].price}€
                       </Typography>
-                      <Typography variant="h5">
+                      <Typography variant="h3">
                         <span style={{ fontWeight: "bold" }}>
                         {t("choosePrice")}
                         </span>{" "}
