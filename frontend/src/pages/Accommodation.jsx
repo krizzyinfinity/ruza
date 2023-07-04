@@ -370,6 +370,12 @@ const Accommodation = () => {
                         </span>{" "}
                         {room.price[0].price}€
                       </Typography>
+                      <Typography variant="h5">
+                        <span style={{ fontWeight: "bold" }}>
+                        {t("choosePrice")}
+                        </span>{" "}
+                        
+                      </Typography>
 
                       <Box
                         sx={{
