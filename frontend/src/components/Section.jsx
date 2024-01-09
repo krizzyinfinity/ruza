@@ -14,7 +14,7 @@ import cinema from "../images/cinema.jpeg";
 import sauna from "../images/sauna.jpg";
 import pool from "../images/pool.jpg";
 import pool3 from "../images/pool3.JPG";
-import poolTr from "../images/poolTr.jpg";
+import poolTr from "../images/elSkuter.jpg";
 import tennis from "../images/tennis.jpeg";
 import jacuzzi from "../images/jacuzzi.jpg";
 import { Link } from "react-router-dom";
