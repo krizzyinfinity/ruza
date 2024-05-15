@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.6408b069.css",
-    "main.js": "/static/js/main.c8505da2.js",
-    "static/media/pool.jpg": "/static/media/pool.e565b6ed2a89802455a7.jpg",
-    "static/media/pic1.jpg": "/static/media/pic1.1edc2ae4bbf5fc0b2ebb.jpg",
+    "main.css": "/static/css/main.7af4ac1c.css",
+    "main.js": "/static/js/main.0290c2ef.js",
+    "static/media/pool.jpg": "/static/media/pool.49f9fd1c952bf40a1973.jpg",
+    "static/media/sauna.jpg": "/static/media/sauna.1326e1c579abf6fb5a1e.jpg",
+    "static/media/pool3.JPG": "/static/media/pool3.35c4731a7f2f31ab310c.JPG",
+    "static/media/jacuzzi.jpg": "/static/media/jacuzzi.07def5e906537160b942.jpg",
     "static/media/mamtat.jpg": "/static/media/mamtat.23d01e9c61d87d3720d8.jpg",
+    "static/media/rsz_1pool_ruza.jpg": "/static/media/rsz_1pool_ruza.33d2471520932e4462f3.jpg",
     "static/media/ap4.jpg": "/static/media/ap4.0c0bcbaaf903836a407b.jpg",
     "static/media/badgminton.jpg": "/static/media/badgminton.9c1dc4b6acfdf2585244.jpg",
     "static/media/kayak2.jpg": "/static/media/kayak2.3028c6ebcddf1a822317.jpg",
@@ -16,19 +19,19 @@
     "static/media/tennis.jpeg": "/static/media/tennis.eac09098c3afd7dc613b.jpeg",
     "static/media/ap5.jpg": "/static/media/ap5.a9c2f28d8d580bdde600.jpg",
     "static/media/ap1.jpg": "/static/media/ap1.47025112fae02e4e34aa.jpg",
-    "static/media/sauna.jpeg": "/static/media/sauna.a7d67bb6c963e2e77cb3.jpeg",
     "static/media/bike.jpg": "/static/media/bike.7b356de4bb024034e35c.jpg",
     "static/media/ap7.jpg": "/static/media/ap7.a9955e03e4619edfe641.jpg",
     "static/media/ap6.jpg": "/static/media/ap6.0ab578b72d47ffc8936a.jpg",
     "static/media/aqa.jpg": "/static/media/aqa.709a01d306cae3cea8c7.jpg",
-    "static/media/jacuzzi.jpg": "/static/media/jacuzzi.9f7f2bb1c027accf8d83.jpg",
+    "static/media/elSkuter.jpg": "/static/media/elSkuter.fe3360eca7e7bc11d719.jpg",
     "static/media/cinema.jpeg": "/static/media/cinema.ccb16dd1b2ab9d1db860.jpeg",
+    "static/media/preuzmi.jfif": "/static/media/preuzmi.46b0fe4b11119914c60a.jfif",
     "index.html": "/index.html",
-    "main.6408b069.css.map": "/static/css/main.6408b069.css.map",
-    "main.c8505da2.js.map": "/static/js/main.c8505da2.js.map"
+    "main.7af4ac1c.css.map": "/static/css/main.7af4ac1c.css.map",
+    "main.0290c2ef.js.map": "/static/js/main.0290c2ef.js.map"
   },
   "entrypoints": [
-    "static/css/main.6408b069.css",
-    "static/js/main.c8505da2.js"
+    "static/css/main.7af4ac1c.css",
+    "static/js/main.0290c2ef.js"
   ]
 }
